@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sandwich Game</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="text-center justify-content-center">
+        <h1>Click to Eat a Sandwich</h1>
+        <h3 id="pbj" class=" p-3 bg-success text-white">Peanut Butter Jelly</h3>
+        <h3 id="grilledcheese" class="p-3 bg-warning text-dark">Grilled Cheese</h3>
+        <h3 id="roastbeef" class="p-3 bg-danger text-white">Roast Beef</h3>
+        <div id="count">
+            <p id="pbjCount"></p>
+            <p id="gcCount"></p>
+            <p id="rbCount"></p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            var pbjCount = 0;
+            var gcCount = 0;
+            var rbCount = 0;
+
+            $("body").on("click", "#pbj", function () {
+                alert("It's Peanut Butter Jelly Time!");
+                pbjCount++;
+                $("#pbjCount").text("PBJ Sandwiches eaten: " + pbjCount);
+            }).on("click", "#grilledcheese", function () {
+                alert("It's Grilled Cheese Time!");
+                gcCount++;
+                $("#gcCount").text("Grilled Cheese Sandwiches eaten: " + gcCount);
+            }).on("click", "#roastbeef", function () {
+                alert("It's Roast Beef Time!");
+                rbCount++;
+                $("#rbCount").text("Roast Beef Sandwiches eaten: " + rbCount);
+            });
+
+        });   
+    </script>
+
+</body>
+
+</html>
